@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Git shooting range</title>
+<link rel="stylesheet" src="styles.css">
+</head>
+
+<body> 
+
+<style>
+#git-instruction {
+	font-family: Consolas;
+	font-weight: bold;
+}
+
+#comment {
+	color: green;
+}
+
+.single { 
+	display: inline-block;
+            margin-left: 40px;
+}
+
+.double { 
+	display: inline-block;
+            margin-left: 80px;
+}
+.triple { 
+	display: inline-block;
+            margin-left: 120px;
+}
+</style>
+
+<h2>
+Of starting up
+</h2>
+
+<table>
+	<tr>
+		<td id ="git-instruction">> cd "username/foldernme"</td>
+		<td id ="comment">// to get to the folder you want to clone repos to<td>
+	</tr>
+	<tr>
+		<td id ="git-instruction">> git clone "web_repos_address"</td>
+		<td id ="comment">// to actually copy your repos<td>
+	</tr>
+</table>
+
+
+<h2>
+Of making a commit
+</h1>
+
+<table>
+	<tr>
+		<td id ="git-instruction">> git add .</td>
+		<td id ="comment">// to add changed files to the scene<td>
+	</tr>
+	<tr>
+		<td id ="git-instruction">> git commit -m "message_text"</td>
+		<td id ="comment">// to actually make a commit (look one line up)<td>
+	</tr>
+	<tr>
+		<td id ="git-instruction">> git push -u origin "branch_name"(master)</td>
+		<td id ="comment">// (optional) pushes files to source<td>
+	</tr>
+</table>
+
+
+<h2 @see "Branch Strategy">
+Of reseting changes	
+</h2>
+
+<h3>
+Way one
+</h3>
+
+<table>
+	<tr>
+		<td id ="git-instruction">> git log</td>
+		<td id ="comment">// to get commit name<td>
+	</tr>
+	<tr>
+		<td id ="git-instruction">> git reset --hard "commit_name" </td>
+		<td id ="comment">// to actually reset changes<td>
+	</tr>
+	<tr>
+		<td id ="git-instruction">> git push -f origin "branch_name"(master)</td>
+		<td id ="comment">// to finally cancell changes<td>
+	</tr>
+</table>
+
+<h3>
+Way two
+</h3>
+
+<table>
+	<tr>
+		<td id ="git-instruction">> git log</td>
+		<td id ="comment">// to get commit name<td>
+	</tr>
+	<tr>
+		<td id ="git-instruction">> git reset --mixed "commit_name"</td>
+		<td id ="comment">// to actually reset changes<td>
+	</tr>
+	<tr>
+		<td id ="git-instruction">> git clean -fd (or '-f -d' separately)</td>
+		<td id ="comment">// to clear the untracked changes<td>
+	</tr>
+	<tr>
+		<td id ="git-instruction">> git push -f origin "branch_name"(master)</td>
+		<td id ="comment">// to finally cancell changes<td>
+	</tr>
+</table>
+
+<p id="comment">  // 'git merge origin/master' before 'git push' would cancel those actions</p>
+
+
+<h1>
+	Branching Strategy
+</h1>
+
+<p>
+
+After you 'git commit' or 'git push', before writing aything:
+</p>
+
+<table>
+  <tr>
+    <td id="git-instruction">> git branch "new_branch_name"</td>
+  </tr>
+  <tr>
+    <td id="git-instruction">> git checkout "new_branch_name"</td>
+  </tr>
+</table>
+<br>
+<p>Only then should you make any actions with your files, commiting as usual.<br>
+If the code doesn't run properly:<br></p>
+<table>
+  <tr>
+    <td id="git-instruction">> git checkout master (main)</td>
+  </tr>
+</table>
+<p>
+And then you can work on as usual.<br>
+</p>
+<p>
+If the code works as it should:<br>
+</p>
+
+<table>
+  <tr>
+    <td id="git-instruction">> git checkout master (main)</td>
+  </tr>
+  <tr>
+    <td id="git-instruction">> git merge "new_branch_name"</td>
+  </tr>
+    <tr>
+    <td id="git-instruction">> git push -u origin master (main)</td>
+	<td id ="comment">// if needed<td>
+  </tr>
+</table>
+
+
+
+</body>
+
+</html>

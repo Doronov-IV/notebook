@@ -1,0 +1,28 @@
+﻿  Drink.cpp
+  Course.cpp
+  Order.cpp
+  OrderBuilder.cpp
+  OrderDirector.cpp
+  DeliverySimulator.cpp
+C:\Users\ipv27\Desktop\Clipboard\Новая папка\Source\DeliveryService\Wrappers\DeliverySimulator.cpp(88,25): warning C4244: '=': conversion from 'wint_t' to 'char', possible loss of data
+C:\Users\ipv27\Desktop\Clipboard\Новая папка\Source\DeliveryService\Wrappers\DeliverySimulator.cpp(106,31): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ipv27\Desktop\Clipboard\Новая папка\Source\DeliveryService\Wrappers\DeliverySimulator.cpp(205,35): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ipv27\Desktop\Clipboard\Новая папка\Source\DeliveryService\Wrappers\DeliverySimulator.cpp(212,31): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ipv27\Desktop\Clipboard\Новая папка\Source\DeliveryService\Wrappers\DeliverySimulator.cpp(217,31): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ipv27\Desktop\Clipboard\Новая папка\Source\DeliveryService\Wrappers\DeliverySimulator.cpp(233,35): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ipv27\Desktop\Clipboard\Новая папка\Source\DeliveryService\Wrappers\DeliverySimulator.cpp(240,31): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ipv27\Desktop\Clipboard\Новая папка\Source\DeliveryService\Wrappers\DeliverySimulator.cpp(245,31): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  OrderDecorator.cpp
+  FileBufferedReader.cpp
+  App.cpp
+C:\Users\ipv27\Desktop\Clipboard\Новая папка\Source\Main\App.cpp(163,25): warning C4244: '=': conversion from 'wint_t' to 'char', possible loss of data
+  Source.cpp
+C:\Users\ipv27\Desktop\Clipboard\Новая папка\Source\Main\Source.cpp(33,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Toolbox.cpp
+C:\Users\ipv27\Desktop\Clipboard\Новая папка\Source\Misc\Toolbox.cpp(12,18): warning C4996: 'ctime': This function or variable may be unsafe. Consider using ctime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\ipv27\Desktop\Clipboard\Новая папка\Source\Misc\Toolbox.cpp(38,27): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\ipv27\Desktop\Clipboard\Новая папка\Source\Misc\Toolbox.cpp(51,23): warning C4244: '=': conversion from 'wint_t' to 'char', possible loss of data
+C:\Users\ipv27\Desktop\Clipboard\Новая папка\Source\Misc\Toolbox.cpp(77,23): warning C4244: '=': conversion from 'wint_t' to 'char', possible loss of data
+  Generating Code...
+  LINK : C:\Users\ipv27\Desktop\Clipboard\Новая папка\x64\Debug\Source.exe not found or not built by the last incremental link; performing full link
+  Source.vcxproj -> C:\Users\ipv27\Desktop\Clipboard\Новая папка\x64\Debug\Source.exe

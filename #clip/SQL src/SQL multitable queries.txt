@@ -1,0 +1,91 @@
+USE StepDB
+GO
+
+/*
+CREATE TABLE City (
+	[Id] INT IDENTITY(0,1) PRIMARY KEY,
+	[Name] NVARCHAR(24) NOT NULL,
+);
+
+CREATE TABLE Product (
+	[Id] INT IDENTITY(0,1) PRIMARY KEY,
+	[Name] NVARCHAR(24) NOT NULL,
+	[Brand] NVARCHAR(24),
+	[Quantity] INT,
+	[Price] INT
+);
+
+CREATE TABLE Stock (
+	[Id] INT IDENTITY(0,1) PRIMARY KEY,
+	[CityId] INT FOREIGN KEY REFERENCES City (Id),
+	[Address] NVARCHAR(24) NOT NULL
+);
+
+CREATE TABLE Accounting (
+	[Id] INT IDENTITY(0,1) PRIMARY KEY,
+	[StockId] INT FOREIGN KEY REFERENCES Stock (Id),
+	[ProductId] INT FOREIGN KEY REFERENCES Product (Id)
+);
+*/
+
+
+--/*
+SELECT *
+FROM City
+
+SELECT *
+FROM Stock
+
+SELECT *
+FROM Product
+
+SELECT *
+FROM Accounting
+--*/
+
+/*
+-- AS keyword redefinition
+SELECT [Name], [Address]
+FROM City AS C, Stock AS S
+
+SELECT [Name], [Address]
+FROM City AS C, Stock AS S
+WHERE C.Id = S.CityId
+*/
+
+/*
+-- repetative info filter
+SELECT Address, [Name]
+FROM Stock AS STK, Product AS PRD, Accounting AS ACC
+WHERE STK.Id = ACC.StockId AND PRD.Id = ACC.ProductId
+*/
+
+/*
+-- DISTINCT keyword
+SELECT City.[Name], [Brand]
+FROM City, Stock, Product, Accounting
+WHERE City.Id = Stock.CityId AND Stock.Id = Accounting.StockId AND Product.Id = Accounting.ProductId
+
+SELECT DISTINCT City.[Name], [Brand]
+FROM City, Stock, Product, Accounting
+WHERE City.Id = Stock.CityId AND Stock.Id = Accounting.StockId AND Product.Id = Accounting.ProductId
+*/
+
+
+
+-- all products from some area
+-- product name where quantity gt some area
+
+
+--/*
+-- second lesson task
+-- At this point my brain just fucking started boiling. Should definitely sleep on this one.
+SELECT DISTINCT CIT.[Name], PRD.[Name]
+FROM City AS CIT, Product AS PRD, Accounting AS ACC, Stock AS STK
+WHERE ACC.StockId = STK.Id
+AND PRD.Id  = ACC.ProductId
+--AND CIT.[Name] = 'Arisona'
+AND PRD.Quantity > 20
+
+
+--*/
